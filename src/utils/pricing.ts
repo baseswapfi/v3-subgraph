@@ -13,7 +13,7 @@ const USDC_WETH_03_POOL = '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8'
 export let WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
   '0x78a087d713be963bf307b18f2ff8122ef9a63ae9', // BSWAP
-  '0xab8a1c03b8e4e1d21c8ddd6edf9e07f26e843492', // OGRE
+  // '0xab8a1c03b8e4e1d21c8ddd6edf9e07f26e843492', // OGRE
   '0xeb466342c4d449bc9f53a865d5cb90586f405215', // axlUSDC
   '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // DAI
   '0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d', // MIM
