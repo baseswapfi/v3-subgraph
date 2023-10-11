@@ -6,7 +6,7 @@
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "yarn codegen && graph build",
-    "deploy": "graph deploy --product hosted-service baseswapfi/v3-base"
+    "deploy": "graph deploy --product hosted-service baseswapfi/v3-scroll-sepolia"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.56.0",
