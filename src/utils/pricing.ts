@@ -10,10 +10,18 @@ const WETH_USDBC_03_POOL = ''
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export let WHITELIST_TOKENS: string[] = [
-  WETH_ADDRESS // WETH
+  WETH_ADDRESS, // WETH
+  '0x3C1BCa5a656e69edCD0D4E36BEbb3FcDAcA60Cf1', // WBTC
+  '0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4', // USDC
+  '0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df', // USDT
+  '0xcA77eB3fEFe3725Dc33bccB54eDEFc3D9f764f97' // DAI
 ]
 
-let STABLE_COINS: string[] = []
+let STABLE_COINS: string[] = [
+  '0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4', // USDC
+  '0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df', // USDT
+  '0xcA77eB3fEFe3725Dc33bccB54eDEFc3D9f764f97' // DAI
+]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('2')
 
