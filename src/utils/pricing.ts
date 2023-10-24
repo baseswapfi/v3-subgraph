@@ -14,6 +14,7 @@ export let WHITELIST_TOKENS: string[] = [
   '0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22', // cbETH
   '0x78a087d713be963bf307b18f2ff8122ef9a63ae9', // BSWAP
   '0xd5046b976188eb40f6de40fb527f89c05b323385', // BSX
+  '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Native USDC
   '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDbC
   '0xeb466342c4d449bc9f53a865d5cb90586f405215', // axlUSDC
   '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // DAI
@@ -24,14 +25,15 @@ export let WHITELIST_TOKENS: string[] = [
   '0x0a074378461fb7ed3300ea638c6cc38246db4434', // EDE
   '0xab8a1c03b8e4e1d21c8ddd6edf9e07f26e843492', // OGRE
   '0x6b4712ae9797c199edd44f897ca09bc57628a1cf', // UNIDX
-  '0x8901cb2e82cc95c01e42206f8d1f417fe53e7af0', // YFX
+  '0x8901cb2e82cc95c01e42206f8d1f417fe53e7af0' // YFX
 ]
 
 let STABLE_COINS: string[] = [
   '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDbC
+  '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Native USDC
   '0xeb466342c4d449bc9f53a865d5cb90586f405215', // axlUSDC
   '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // DAI
-  '0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d', // MIM
+  '0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d' // MIM
 ]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('2')
