@@ -8,7 +8,7 @@ const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
 const WETH_USDBC_03_POOL = '0xef3c164b0fee8eb073513e88ecea280a58cc9945'
 
 // token where amounts should contribute to tracked volume and liquidity
-// usually tokens that many tokens are paired with s
+// usually tokens that many tokens are paired with
 export let WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
   '0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22', // cbETH
@@ -25,7 +25,10 @@ export let WHITELIST_TOKENS: string[] = [
   '0x0a074378461fb7ed3300ea638c6cc38246db4434', // EDE
   '0xab8a1c03b8e4e1d21c8ddd6edf9e07f26e843492', // OGRE
   '0x6b4712ae9797c199edd44f897ca09bc57628a1cf', // UNIDX
-  '0x8901cb2e82cc95c01e42206f8d1f417fe53e7af0' // YFX
+  '0x8901cb2e82cc95c01e42206f8d1f417fe53e7af0', // YFX
+  '0xa3d1a8deb97b111454b294e2324efad13a9d8396', // OVN
+  '0xbf1aeA8670D2528E08334083616dD9C5F3B087aE', // MAI
+  '0x4A0a76645941d8C7ba059940B3446228F0DB8972' // CAROL
 ]
 
 let STABLE_COINS: string[] = [
@@ -33,7 +36,10 @@ let STABLE_COINS: string[] = [
   '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Native USDC
   '0xeb466342c4d449bc9f53a865d5cb90586f405215', // axlUSDC
   '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // DAI
-  '0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d' // MIM
+  '0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d', // MIM
+  '0xb79dd08ea68a908a97220c76d19a6aa9cbde4376', // USD+
+  '0x65a2508c429a6078a7bc2f7df81ab575bd9d9275', // DAI+
+  '0xbf1aeA8670D2528E08334083616dD9C5F3B087aE' // MAI
 ]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('2')
