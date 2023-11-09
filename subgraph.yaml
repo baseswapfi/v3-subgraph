@@ -8,11 +8,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: base
+    network: base-testnet
     source:
-      address: '0x38015d05f4fec8afe15d7cc0386a126574e8077b'
+      address: '0xd4e13e0451D32bf846a77b7C354c7cf611290CfC'
       abi: Factory
-      startBlock: 3152527
+      startBlock: 12170410
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -37,11 +37,11 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: base
+    network: base-testnet
     source:
-      address: '0xde151d5c92bfaa288db4b67c21cd55d5826bcc93'
+      address: '0x4c656A290161CE89538e305075098FE92bDcB5E6'
       abi: NonfungiblePositionManager
-      startBlock: 3152527
+      startBlock: 12170942
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -71,7 +71,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: base
+    network: base-testnet
     source:
       abi: Pool
     mapping:
