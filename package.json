@@ -6,7 +6,7 @@
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "yarn codegen && graph build",
-    "deploy": "graph deploy --product hosted-service baseswapfi/v3-base-goerli"
+    "deploy": "npx graph deploy v3-base-goerli --version-label v0.0.1-new-version --deploy-key  --node https://subgraphs.alchemy.com/api/subgraphs/deploy --ipfs https://ipfs.satsuma.xyz"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.56.0",
