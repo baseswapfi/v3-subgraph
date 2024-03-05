@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 description: BaseX is a decentralized protocol for automated token exchange on Base.
-repository: https://github.com/harleen-m/basex-subgraph
+repository: https://github.com/swapmode/v3-subgraph
 schema:
   file: ./schema.graphql
 features:
@@ -8,11 +8,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: base
+    network: mode-mainnet
     source:
-      address: '0x38015d05f4fec8afe15d7cc0386a126574e8077b'
+      address: '0xD4f08b675270DFD9FedAeA5E6a879a945BE80d1d'
       abi: Factory
-      startBlock: 3152527
+      startBlock: 3747578
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -37,11 +37,11 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: base
+    network: mode-mainnet
     source:
-      address: '0xde151d5c92bfaa288db4b67c21cd55d5826bcc93'
+      address: '0xd4974B38D5a4Ea2a9FA181Aa52A0336cCe5E12A0'
       abi: NonfungiblePositionManager
-      startBlock: 3152527
+      startBlock: 3747908
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -71,7 +71,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: base
+    network: mode-mainnet
     source:
       abi: Pool
     mapping:
