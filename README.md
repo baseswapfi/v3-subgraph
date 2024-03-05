@@ -1,7 +1,6 @@
-# BaseX Subgraph
+# Baseswap Subgraphs
 
-### Subgraph Endpoint
+### Subgraph Endpoints
 
-Synced at: https://thegraph.com/hosted-service/subgraph/harleen-m/basex
-
-Pending Changes at same URL
+Baseswap: https://thegraph.com/hosted-service/subgraph/harleen-m/basex
+Swapmode:
