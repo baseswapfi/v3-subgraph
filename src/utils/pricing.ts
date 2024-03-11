@@ -5,7 +5,7 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
-const WETH_USDC_03_POOL = '' // TODO: Need this pool for pricing
+const WETH_USDC_03_POOL = '0x1deDEC1C905f087ED4B521E96f81CC2E38B62327'
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with
@@ -15,7 +15,8 @@ export let WHITELIST_TOKENS: string[] = [
   '0xd988097fb8612cc24eeC14542bC03424c656005f', // Native USDC
   '0xE7798f023fC62146e8Aa1b36Da45fb70855a77Ea', // DAI
   '0xf0F161fDA2712DB8b566946122a5af183995e2eD', // USDT
-  '0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF' // WBTC
+  '0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF', // WBTC
+  '0x2416092f143378750bb29b79eD961ab195CcEea5' // Renzo ezETH
 ]
 
 let STABLE_COINS: string[] = [
@@ -40,15 +41,13 @@ export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, t
 }
 
 export function getEthPriceInUSD(): BigDecimal {
-  // // fetch eth price for a stablecoin
-  // let usdcPool = Pool.load(WETH_USDC_03_POOL) // USDC is token1
-  // if (usdcPool !== null) {
-  //   return usdcPool.token1Price
-  // } else {
-  //   return ZERO_BD
-  // }
-
-  return ZERO_BD
+  // fetch eth price for a stablecoin
+  let usdcPool = Pool.load(WETH_USDC_03_POOL) // USDC is token1
+  if (usdcPool !== null) {
+    return usdcPool.token1Price
+  } else {
+    return ZERO_BD
+  }
 }
 
 /**
