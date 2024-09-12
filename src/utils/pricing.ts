@@ -5,7 +5,7 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
-const WETH_USDC_03_POOL = ''
+const WETH_USDC_03_POOL = '0xcd273d6c82d36f59b7adf92c39c5e7318c01fa71'
 
 const DAI_ADDRESS = '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1'
 const USDC_ADDRESS = '0x7f5c764cbc14f9669b88837ca1490cca17c31607'
