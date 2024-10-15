@@ -8,11 +8,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: optimism
+    network: soneium-testnet
     source:
-      address: '0xe52a36Bb76e8f40e1117db5Ff14Bd1f7b058B720'
+      address: '0xe52a36bb76e8f40e1117db5ff14bd1f7b058b720'
       abi: Factory
-      startBlock: 124982239
+      startBlock: 2735067
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -37,11 +37,11 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: optimism
+    network: soneium-testnet
     source:
       address: '0x74a52eb08d699CD8BE1d42dA4B241d526B8a8285'
       abi: NonfungiblePositionManager
-      startBlock: 125278292
+      startBlock: 2736050
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -71,7 +71,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: optimism
+    network: soneium-testnet
     source:
       abi: Pool
     mapping:

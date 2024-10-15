@@ -5,39 +5,19 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
-const WETH_USDC_03_POOL = '0xcd273d6c82d36f59b7adf92c39c5e7318c01fa71'
+const WETH_USDC_03_POOL = '' // TODO: Check token 0/1 order
 
-const DAI_ADDRESS = '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1'
-const USDC_ADDRESS = '0x7f5c764cbc14f9669b88837ca1490cca17c31607'
-const CIRCLE_USDC_ADDRESS = '0x0b2c639c533813f4aa9d7837caf62653d097ff85'
-const USDT_ADDRESS = '0x94b008aa00579c1307b0ef2c499ad98a8ce58e58'
-const FRAX_ADDRESS = '0x2e3d870790dc77a83dd1d18184acc7439a53f475'
-const USD_PLUS_ADDRESS = '0x73cb180bf0521828d8849bc8cf2b920918e23032'
+const CIRCLE_USDC_ADDRESS = '0xe9a198d38483ad727abc8b0b1e16b2d338cf0391'
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with
 export let WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS,
-  DAI_ADDRESS,
-  USDC_ADDRESS,
-  USDT_ADDRESS,
   CIRCLE_USDC_ADDRESS,
-  FRAX_ADDRESS,
-  USD_PLUS_ADDRESS,
-  '0x4200000000000000000000000000000000000042', // OP
-  '0x9e1028f5f1d5ede59748ffcee5532509976840e0', // PERP
-  '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // LYRA
-  '0x68f180fcce6836688e9084f035309e29bf0a2095' // WBTC
+  '0x5717d6a621aa104b0b4cad32bfe6ad3b659f269e' // wstETH
 ]
 
-let STABLE_COINS: string[] = [
-  DAI_ADDRESS,
-  USDC_ADDRESS,
-  USDT_ADDRESS,
-  CIRCLE_USDC_ADDRESS,
-  FRAX_ADDRESS,
-  USD_PLUS_ADDRESS
-]
+let STABLE_COINS: string[] = [CIRCLE_USDC_ADDRESS]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('0')
 
