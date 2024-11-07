@@ -13,7 +13,14 @@ export let WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS,
   '0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f', // WBTC
   '0x912ce59144191c1204e64559fe8253a0e49e6548', // ARB
-  '0xD5954c3084a1cCd70B4dA011E67760B8e78aeE84' // ARX
+  '0xD5954c3084a1cCd70B4dA011E67760B8e78aeE84', // ARX
+
+  '0x17fc002b466eec40dae837fc4be5c67993ddbd6f', // FRAX
+  '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9', // USDT
+  '0xaf88d065e77c8cc2239327c5edb3a432268e5831', // USDC
+  '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8', // USDC.e
+  '0xe80772eaf6e2e18b651f160bc9158b2a5cafca65', // USD+
+  '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1' // DAI
 ]
 
 let STABLE_COINS: string[] = [
