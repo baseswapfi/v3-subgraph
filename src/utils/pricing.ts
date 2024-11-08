@@ -5,7 +5,7 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
-const WETH_USDBC_03_POOL = '0xef3c164b0fee8eb073513e88ecea280a58cc9945'
+const WETH_USDC_03_POOL = '0x74cb6260be6f31965c239df6d6ef2ac2b5d4f020'
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with
@@ -16,6 +16,7 @@ export let WHITELIST_TOKENS: string[] = [
   '0xd5046b976188eb40f6de40fb527f89c05b323385', // BSX
   '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Native USDC
   '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDbC
+  '0xfde4c96c8593536e31f229ea8f37b2ada2699bb2', // USDT
   '0xeb466342c4d449bc9f53a865d5cb90586f405215', // axlUSDC
   '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // DAI
   '0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d', // MIM
@@ -31,11 +32,13 @@ export let WHITELIST_TOKENS: string[] = [
   '0x4A0a76645941d8C7ba059940B3446228F0DB8972', // CAROL
   '0xe4796ccb6bb5de2290c417ac337f2b66ca2e770e', // sFRAX
   '0x1f55a02A049033E3419a8E2975cF3F572F4e6E9A', // sfrxETH
-  '0x23432452b720c80553458496d4d9d7c5003280d0' // FXS
+  '0x23432452b720c80553458496d4d9d7c5003280d0', // FXS
+  '0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf' // cbBTC
 ]
 
 let STABLE_COINS: string[] = [
   '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDbC
+  '0xfde4c96c8593536e31f229ea8f37b2ada2699bb2', // USDT
   '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Native USDC
   '0xeb466342c4d449bc9f53a865d5cb90586f405215', // axlUSDC
   '0x50c5725949a6f0c72e6c4a641f24049a917db0cb', // DAI
@@ -45,7 +48,7 @@ let STABLE_COINS: string[] = [
   '0xbf1aeA8670D2528E08334083616dD9C5F3B087aE' // MAI
 ]
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString('2')
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString('1')
 
 let Q192 = '6277101735386680763835789423207666416102355444464034512896'
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
@@ -62,9 +65,9 @@ export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, t
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth price for a stablecoin
-  let usdcPool = Pool.load(WETH_USDBC_03_POOL) // USDbC is token1
+  let usdcPool = Pool.load(WETH_USDC_03_POOL)
   if (usdcPool !== null) {
-    return usdcPool.token1Price
+    return usdcPool.token1Price // USDC is token1
   } else {
     return ZERO_BD
   }
