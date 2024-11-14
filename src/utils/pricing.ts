@@ -5,7 +5,7 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
-const WETH_USDC_03_POOL = '' // TODO: Check token 0/1 order
+const WETH_USDC_03_POOL = '0xd327e77490a0d6f92b300cc7f946ed0591428e81'
 
 const CIRCLE_USDC_ADDRESS = '0xe9a198d38483ad727abc8b0b1e16b2d338cf0391'
 
@@ -14,7 +14,8 @@ const CIRCLE_USDC_ADDRESS = '0xe9a198d38483ad727abc8b0b1e16b2d338cf0391'
 export let WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS,
   CIRCLE_USDC_ADDRESS,
-  '0x5717d6a621aa104b0b4cad32bfe6ad3b659f269e' // wstETH
+  '0x5717d6a621aa104b0b4cad32bfe6ad3b659f269e', // wstETH
+  '0x32b8254f669a5fa56fd4acfa141ed7243eb767b5' // WBTC
 ]
 
 let STABLE_COINS: string[] = [CIRCLE_USDC_ADDRESS]
@@ -36,9 +37,9 @@ export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, t
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth price for a stablecoin
-  let usdcPool = Pool.load(WETH_USDC_03_POOL) // USDC is token1
+  let usdcPool = Pool.load(WETH_USDC_03_POOL)
   if (usdcPool !== null) {
-    return usdcPool.token1Price
+    return usdcPool.token1Price // USDC is token1
   } else {
     return ZERO_BD
   }
