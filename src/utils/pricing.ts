@@ -15,7 +15,8 @@ export let WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS,
   CIRCLE_USDC_ADDRESS,
   '0x5717d6a621aa104b0b4cad32bfe6ad3b659f269e', // wstETH
-  '0x32b8254f669a5fa56fd4acfa141ed7243eb767b5' // WBTC
+  '0x32b8254f669a5fa56fd4acfa141ed7243eb767b5', // WBTC
+  '0xe4c743036c74026649c9dc1b8c2abb028bbf4c14' // USDT
 ]
 
 let STABLE_COINS: string[] = [CIRCLE_USDC_ADDRESS]
