@@ -41,21 +41,49 @@ export function createTick(tickId: string, tickIdx: i32, poolId: string, event: 
 }
 
 export function feeTierToTickSpacing(feeTier: BigInt): BigInt {
+  // 0.02 - 2%
+  if (feeTier.equals(BigInt.fromI32(20000))) {
+    return BigInt.fromI32(1)
+  }
+
+  // 0.01 - 1%
   if (feeTier.equals(BigInt.fromI32(10000))) {
     return BigInt.fromI32(200)
   }
+
+  // 0.0085 - 0.85%
+  if (feeTier.equals(BigInt.fromI32(8500))) {
+    return BigInt.fromI32(1)
+  }
+
   if (feeTier.equals(BigInt.fromI32(2500))) {
     return BigInt.fromI32(60)
   }
+
+  // 0.002 - 0.2%
+  if (feeTier.equals(BigInt.fromI32(2000))) {
+    return BigInt.fromI32(1)
+  }
+
   if (feeTier.equals(BigInt.fromI32(450))) {
     return BigInt.fromI32(10)
   }
+
   if (feeTier.equals(BigInt.fromI32(350))) {
     return BigInt.fromI32(10)
   }
+
+  // 0.00008 - 0.008%
   if (feeTier.equals(BigInt.fromI32(80))) {
     return BigInt.fromI32(1)
   }
+
+  // 0.00005 - 0.005%
+  if (feeTier.equals(BigInt.fromI32(50))) {
+    return BigInt.fromI32(1)
+  }
+
+  // 1 = 0.000001 = 0.0001%
   if (feeTier.equals(BigInt.fromI32(1))) {
     return BigInt.fromI32(1)
   }
